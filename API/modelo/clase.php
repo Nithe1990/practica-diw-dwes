@@ -7,18 +7,18 @@
         private $plazasOcupadas;
         private $fechaInicio;
         private $fechaFin;
-        private $tipoClase;
-        private $monitor;
+        private $idTipo;
+        private $idMonitor;
 
-        public function __construct($sala, $plazas, $fechaInicio, $fechaFin, $tipoClase, $monitor){
+        public function __construct($sala, $plazas, $fechaInicio, $fechaFin, $idTipo, $idMonitor){
             $this->activo = true;
             $this->sala = $sala;
             $this->plazas = $plazas;
             $this->plazasOcupadas = 0;
             $this->fechaInicio = $fechaInicio;
             $this->fechaFin = $fechaFin;
-            $this->tipoClase = $tipoClase;
-            $this->monitor = $monitor;
+            $this->idTipo = $idTipo;
+            $this->idMonitor = $idMonitor;
         }
         
         public function __get($atributo){
