@@ -1,5 +1,5 @@
 <?
-    class TipoClaseDAODAO{
+    class TipoClaseDAO{
         public function findAll(){
 
         }
