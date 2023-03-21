@@ -77,11 +77,11 @@ CREATE TABLE IF NOT EXISTS `evento` (
 
 DROP TABLE IF EXISTS `rutina`;
 CREATE TABLE IF NOT EXISTS `rutina` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `idRutina` int NOT NULL AUTO_INCREMENT,
   `activo` tinyint(1) NOT NULL,
   `fecha_inicio` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `fecha_fin` datetime NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idRutina`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish2_ci;
 
 DROP TABLE IF EXISTS `rutina_ejercicio`;
@@ -128,7 +128,7 @@ ALTER TABLE `alumno_evento`
   ADD CONSTRAINT `alumno_evento_ibfk_2` FOREIGN KEY (`idEvento`) REFERENCES `evento` (`idEvento`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `alumno_rutina`
-  ADD CONSTRAINT `alumno_rutina_ibfk_1` FOREIGN KEY (`idRutina`) REFERENCES `rutina` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `alumno_rutina_ibfk_1` FOREIGN KEY (`idRutina`) REFERENCES `rutina` (`idRutina`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   ADD CONSTRAINT `alumno_rutina_ibfk_2` FOREIGN KEY (`idAlumno`) REFERENCES `usuario` (`idUsuario`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `clase`
@@ -136,7 +136,7 @@ ALTER TABLE `clase`
   ADD CONSTRAINT `clase_ibfk_2` FOREIGN KEY (`idTipo`) REFERENCES `tipo_clase` (`idTipo`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `rutina_ejercicio`
-  ADD CONSTRAINT `rutina_ejercicio_ibfk_1` FOREIGN KEY (`idRutina`) REFERENCES `rutina` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `rutina_ejercicio_ibfk_1` FOREIGN KEY (`idRutina`) REFERENCES `rutina` (`idRutina`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   ADD CONSTRAINT `rutina_ejercicio_ibfk_2` FOREIGN KEY (`idEjercicio`) REFERENCES `ejercicio` (`idEjercicio`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

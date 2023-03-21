@@ -2,9 +2,9 @@
     require_once "./DAO.php";
     require_once "./factory.php";
 
-    class EventoDAO extends Factory implements DAO{
+    class AlumnoRutinaDAO extends Factory implements DAO{
         public static function findAll(){
-            $sql = "select * from evento;";
+            $sql = "select * from alumno_rutina;";
             $datos = array();
             $resultado = parent::ejecutar($sql, $datos);
             $arrayClases = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -12,7 +12,7 @@
         }
 
         public static function findById($id){
-            $sql = "select * from evento where idEvento = ?";
+            $sql = "select * from alumno_rutina where idAlumno_rutina = ?";
             $datos = array($id);
             $resultado = parent::ejecutar($sql, $datos);
             $clase = $resultado->fetch(PDO::FETCH_ASSOC);
@@ -21,7 +21,7 @@
         }
 
         public static function insert($objeto){
-            $sql = "insert into evento values (?,?,?,?,?,?)";
+            $sql = "insert into alumno_rutina values (?,?,?)";
             $objeto = (array)$objeto;
             $datos = array();
             foreach ($objeto as $atributo) array_push($datos,$atributo);
@@ -31,15 +31,15 @@
         }
 
         public static function update($objeto){
-            $sql = "update evento set activo = ?, titular = ?, descripcion = ?, fecha_inicio = ?, fecha_fin = ? where idEvento = ?";
-            $datos = array($objeto->activo, $objeto->titular, $objeto->descripcion, $objeto->fecha_inicio, $objeto->fecha_fin, $objeto->idEvento);
+            $sql = "update alumno_rutina set idAlumno = ?, idRutina = ? where idAlumno_rutina = ?";
+            $datos = array($objeto->idAlumno, $objeto->idRutina, $objeto->idAlumnoRutina);
             $resultado = parent::ejecutar($sql, $datos);
             if($resultado->rowCount() == 0) return false;
             return true;
         }
 
         public static function delete($id){
-            $sql = "delete from evento where idEvento = ?";
+            $sql = "delete from alumno_rutina where idAlumno_rutina = ?";
             $datos = array($id);
             $resultado = parent::ejecutar($sql, $datos);
             if($resultado->rowCount() == 0) return false;

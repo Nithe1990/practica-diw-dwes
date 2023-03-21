@@ -11,7 +11,7 @@
             } catch (Exception $e) {
                 $sentencia = null;
                 if($e->getCode() == 2002 || $e->getCode() == 1049){
-                    ControladorPadre::respuesta('', array('HTTP/1.1 500 Error delo servidor'));
+                    ControladorPadre::respuesta('', array('HTTP/1.1 500 Error del servidor'));
                 }else{
                     ControladorPadre::respuesta('', array('HTTP/1.1 400 Alguno de los parametros es erróneo' .$e->getMessage()));
                 }

@@ -12,7 +12,7 @@
         }
 
         public static function findById($id){
-            $sql = "select * from clase where id = ?";
+            $sql = "select * from clase where idClase = ?";
             $datos = array($id);
             $resultado = parent::ejecutar($sql, $datos);
             $clase = $resultado->fetch(PDO::FETCH_ASSOC);
@@ -31,15 +31,15 @@
         }
 
         public static function update($objeto){
-            $sql = "update clase set activo = ?, sala = ?, plazas = ?, plazas_ocupadas = ?, fecha_inicio = ?, fecha_fin = ?, idTipo = ?, idMonitor = ? where id = ?";
-            $datos = array($objeto->activo, $objeto->sala, $objeto->plazas, $objeto->plazas_ocupadas, $objeto->fecha_inicio, $objeto->fecha_fin, $objeto->idTipo, $objeto->idMonitor, $objeto->id);
+            $sql = "update clase set activo = ?, sala = ?, plazas = ?, plazas_ocupadas = ?, fecha_inicio = ?, fecha_fin = ?, idTipo = ?, idMonitor = ? where idClase = ?";
+            $datos = array($objeto->activo, $objeto->sala, $objeto->plazas, $objeto->plazas_ocupadas, $objeto->fecha_inicio, $objeto->fecha_fin, $objeto->idTipo, $objeto->idMonitor, $objeto->idClase);
             $resultado = parent::ejecutar($sql, $datos);
             if($resultado->rowCount() == 0) return false;
             return true;
         }
 
         public static function delete($id){
-            $sql = "delete from clase where id = ?";
+            $sql = "delete from clase where idClase = ?";
             $datos = array($id);
             $resultado = parent::ejecutar($sql, $datos);
             if($resultado->rowCount() == 0) return false;

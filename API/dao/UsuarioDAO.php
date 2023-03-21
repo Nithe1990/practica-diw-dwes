@@ -1,31 +1,49 @@
 <?
-    class UsuarioDAO{
-        public function findAll(){
+    require_once "./DAO.php";
+    require_once "./factory.php";
 
+    class UsuarioDAO extends Factory implements DAO{
+        public static function findAll(){
+            $sql = "select * from usuario;";
+            $datos = array();
+            $resultado = parent::ejecutar($sql, $datos);
+            $arrayClases = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            return $arrayClases;
         }
 
-        public function findById($id){
-
+        public static function findById($id){
+            $sql = "select * from usuario where idUsuario = ?";
+            $datos = array($id);
+            $resultado = parent::ejecutar($sql, $datos);
+            $clase = $resultado->fetch(PDO::FETCH_ASSOC);
+            if($clase) return $clase;
+            return null;
         }
 
-        public function insert(){
-
+        public static function insert($objeto){
+            $sql = "insert into usuario values (?,?,?,?,?,?,?,?)";
+            $objeto = (array)$objeto;
+            $datos = array();
+            foreach ($objeto as $atributo) array_push($datos,$atributo);
+            $resultado = parent::ejecutar($sql, $datos);
+            if($resultado->rowCount() == 0) return false;
+            return true;
         }
 
-        public function update(){
-
+        public static function update($objeto){
+            $sql = "update usuario set activo = ?, user = ?, contrasena = ?, rol = ?, email = ?, telefono = ?, fecha_nacimiento = ? where idUsuario = ?";
+            $datos = array($objeto->activo, $objeto->user, $objeto->contrasena, $objeto->rol, $objeto->email, $objeto->telefono, $objeto->fecha_nacimimiento, $objeto->idUsuario);
+            $resultado = parent::ejecutar($sql, $datos);
+            if($resultado->rowCount() == 0) return false;
+            return true;
         }
 
-        public function delete(){
-
-        }
-
-        public function validaUsuario(){
-
-        }
-
-        public function findByRol($rol){
-            
+        public static function delete($id){
+            $sql = "delete from usuario where idUsuario = ?";
+            $datos = array($id);
+            $resultado = parent::ejecutar($sql, $datos);
+            if($resultado->rowCount() == 0) return false;
+            return true;
         }
     }
 ?>
