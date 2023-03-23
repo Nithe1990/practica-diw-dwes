@@ -1,5 +1,5 @@
 <?
-    class Usuario{
+    class Evento{
         private $idEvento;
         private $activo;
         private $titular;

@@ -1,6 +1,6 @@
 <?
     class TipoClase{
-        private $idClase;
+        private $idTipo;
         private $activo;
         private $nombre;
         private $descripcion;
