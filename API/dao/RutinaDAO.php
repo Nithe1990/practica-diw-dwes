@@ -7,16 +7,16 @@
             $sql = "select * from rutina;";
             $datos = array();
             $resultado = parent::ejecutar($sql, $datos);
-            $arrayClases = $resultado->fetchAll(PDO::FETCH_ASSOC);
-            return $arrayClases;
+            $arrayRutinas = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            return $arrayRutinas;
         }
 
         public static function findById($id){
             $sql = "select * from rutina where idRutina = ?";
             $datos = array($id);
             $resultado = parent::ejecutar($sql, $datos);
-            $clase = $resultado->fetch(PDO::FETCH_ASSOC);
-            if($clase) return $clase;
+            $rutina = $resultado->fetch(PDO::FETCH_ASSOC);
+            if($rutina) return $rutina;
             return null;
         }
 

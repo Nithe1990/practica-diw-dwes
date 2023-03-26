@@ -7,16 +7,16 @@
             $sql = "select * from alumno_evento;";
             $datos = array();
             $resultado = parent::ejecutar($sql, $datos);
-            $arrayClases = $resultado->fetchAll(PDO::FETCH_ASSOC);
-            return $arrayClases;
+            $arrayAlumnoEvento = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            return $arrayAlumnoEvento;
         }
 
         public static function findById($id){
             $sql = "select * from alumno_evento where idAlumno_evento = ?";
             $datos = array($id);
             $resultado = parent::ejecutar($sql, $datos);
-            $clase = $resultado->fetch(PDO::FETCH_ASSOC);
-            if($clase) return $clase;
+            $alumnoEvento = $resultado->fetch(PDO::FETCH_ASSOC);
+            if($alumnoEvento) return $alumnoEvento;
             return null;
         }
 

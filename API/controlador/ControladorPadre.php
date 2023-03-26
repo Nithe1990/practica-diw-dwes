@@ -1,6 +1,6 @@
 <?
     class ControladorPadre{
-        public function comprobarRecurso(){
+        public static function comprobarRecurso(){
             if(isset($_SERVER['PATH_INFO'])){
                 $uri = $_SERVER['PATH_INFO'];
                 $uri = explode('/',$uri);
