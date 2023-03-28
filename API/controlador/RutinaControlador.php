@@ -45,7 +45,7 @@
 
         public function crear(){
             $dato = json_decode(file_get_contents('php://input'), true);
-            if(isset($dato['activo']) && isset($dato['fecha_inicio']) && isset($dato['fecha_fin'])){
+            if(isset($dato['fecha_inicio']) && isset($dato['fecha_fin'])){
                 $rutina = new Rutina($dato['fecha_inicio'], $dato['fecha_fin']);
                 if(RutinaDAO::insert($rutina)){
                     self::respuesta('', array('Content-Type: application/json', 'HTTP/1.1 201 CREADO'));

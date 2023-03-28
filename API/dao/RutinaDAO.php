@@ -1,7 +1,4 @@
 <?
-    require_once "./DAO.php";
-    require_once "./factory.php";
-
     class RutinaDAO extends Factory implements DAO{
         public static function findAll(){
             $sql = "select * from rutina;";

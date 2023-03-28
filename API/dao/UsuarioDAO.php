@@ -1,6 +1,4 @@
 <?
-    require_once "./DAO.php";
-    require_once "./factory.php";
 
     class UsuarioDAO extends Factory implements DAO{
         public static function findAll(){
@@ -18,6 +16,44 @@
             $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
             if($usuario) return $usuario;
             return null;
+        }
+
+        public static function validaUsuario($usu, $contrasena){
+            $sql = "select * from usuario where user = ? AND contrasena = ?";
+            $datos = array($usu, $contrasena);
+            $resultado = parent::ejecutar($sql, $datos);
+            $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
+            if($usuario) return $usuario;
+            return null;
+        }
+
+        public static function findByUser($usu){
+            $sql = "select * from usuario where user = ?";
+            $datos = array($usu);
+            $resultado = parent::ejecutar($sql, $datos);
+            $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
+            if($usuario) return $usuario;
+            return null;
+        }
+
+        public static function findByRol($rol){
+            $sql = "select * from usuario where rol = ?";
+            $datos = array($rol);
+            $resultado = parent::ejecutar($sql, $datos);
+            $arrayUsuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            return $arrayUsuarios;
+        }
+
+        public static function findByFecha($fecha){
+            $sql = "select * from usuario where fecha_nacimiento >= ?";
+            $datos = array($fecha);
+            $resultado = parent::ejecutar($sql, $datos);
+            $arrayUsuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            return $arrayUsuarios;
+        }
+
+        public function orderByFecha($fecha){
+            $sql = "select * from usuarios order by fecha " .$fecha.";";
         }
 
         public static function insert($objeto){

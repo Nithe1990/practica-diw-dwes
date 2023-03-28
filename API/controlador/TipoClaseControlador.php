@@ -45,7 +45,7 @@
 
         public function crear(){
             $dato = json_decode(file_get_contents('php://input'), true);
-            if(isset($dato['activo']) && ($dato['nombre']) && ($dato['descripcion'])){
+            if(($dato['nombre']) && ($dato['descripcion'])){
                 $tipoClase = new TipoClase($dato['nombre'], $dato['descripcion']);
                 if(TipoClaseDAO::insert($tipoClase)){
                     self::respuesta('', array('Content-Type: application/json', 'HTTP/1.1 201 CREADO'));

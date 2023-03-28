@@ -45,7 +45,7 @@
 
         public function crear(){
             $dato = json_decode(file_get_contents('php://input'), true);
-            if(isset($dato['activo']) && isset($dato['sala']) && isset($dato['plazas']) && isset($dato['plazas_ocupadas']) 
+            if(isset($dato['sala']) && isset($dato['plazas']) && isset($dato['plazas_ocupadas']) 
             && isset($dato['fecha_inicio']) && isset($dato['fecha_fin']) && isset($dato['idTipo']) && 
             isset($dato['idMonitor'])){
                 $clase = new Clase($dato['sala'], $dato['plazas'], $dato['fecha_inicio'], $dato['fecha_fin'], $dato['idTipo'], $dato['idMonitor']);

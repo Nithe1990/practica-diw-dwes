@@ -45,7 +45,7 @@
 
         public function crear(){
             $dato = json_decode(file_get_contents('php://input'), true);
-            if(isset($dato['activo']) && isset($dato['nombre']) && isset($dato['tipo']) && isset($dato['video'])){
+            if(isset($dato['nombre']) && isset($dato['tipo']) && isset($dato['video'])){
                 $clase = new Clase($dato['sala'], $dato['plazas'], $dato['fecha_inicio'], $dato['fecha_fin'], $dato['idTipo'], $dato['idMonitor']);
                 if(ClaseDAO::insert($clase)){
                     self::respuesta('', array('Content-Type: application/json', 'HTTP/1.1 201 CREADO'));

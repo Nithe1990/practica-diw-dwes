@@ -45,7 +45,7 @@
 
         public function crear(){
             $dato = json_decode(file_get_contents('php://input'), true);
-            if(isset($dato['activo']) && isset($dato['user']) && isset($dato['contrasena']) && isset($dato['rol']) && 
+            if(isset($dato['user']) && isset($dato['contrasena']) && isset($dato['rol']) && 
             isset($dato['email']) && isset($dato['telefono']) && isset($dato['fecha_nacimiento'])){
                 $usuario = new Usuario($dato['user'], $dato['contrasena'], $dato['rol'], $dato['email'], $dato['telefono'],
                 $dato['fecha_nacimiento']);
