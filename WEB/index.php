@@ -1,0 +1,3 @@
+<?
+    include 'vista/layout.php';
+?>
