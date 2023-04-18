@@ -31,6 +31,10 @@
                     $lista = UsuarioDAO::findAll();
                     $data = json_encode($lista);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+                }elseif(count($parametros) == 2){
+                    $usuario = UsuarioDAO::validaUsuario($parametros['usuario'], $parametros['contrasena']);
+                    $data = json_encode($usuario);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
                 }else{
                     self::respuesta('', array('HTTP/1.1 400 No se ha utilizado un filtro correcto'));
                 }
