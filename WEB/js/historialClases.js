@@ -1,6 +1,10 @@
 $(document).ready(function(){
-    $(".cinco").mouseenter(function(){
-        $(this).find('img').attr("src", "../web root/imágenes/star-fill.svg");
-        $(".cuatro").find('img').attr("src", "../web root/imágenes/star-fill.svg");
+    $("button img").hover(function(){
+        $(this).attr("src", "../web root/imágenes/star-fill.svg");
+        $(this).parent().nextAll().children().attr("src", "../web root/imágenes/star-fill.svg");
+    },
+    function(){
+        $(this).attr("src", "../web root/imágenes/star.svg");
+        $(this).parent().nextAll().children().attr("src", "../web root/imágenes/star.svg");
     });
 });
