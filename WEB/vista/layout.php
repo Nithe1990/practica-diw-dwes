@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./web root/css/cabecera.css">
+    <link rel="stylesheet" href="./webroot/css/cabecera.css">
     <title>Document</title>
 </head>
 <header class="container-fluid d-flex justify-content-around align-items-center bg-warning">
-    <img src="./web root/imágenes/logo.png" alt="logo" width="128" height="auto">
+    <img src="./webroot/imágenes/logo.png" alt="logo" width="128" height="auto">
     <h1>Gimnasio Claudino</h1>
     <button data-bs-toggle="modal" data-bs-target="#modUsu">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
