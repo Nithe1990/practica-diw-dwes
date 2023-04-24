@@ -23,6 +23,19 @@
             $res = curl_exec($curl);
             print_r($res);
             curl_close($curl);
+            
+            //crear sesión
+            //si existe el usuario, crearle sesión
+            if(isset($usu)){
+                $usu = json_decode($res, true);
+                $_SESSION['idUsuario'] = $usu['idUsuario'];
+                $_SESSION['user'] = $usu['user'];
+                $_SESSION['rol'] = $usu['rol'];
+            }else{
+                echo "usuario incorrecto";
+            }
+            //asignarle a session controlador index controlador y principal controlador
+            var_dump($_SESSION);
         }
     }else{
 
