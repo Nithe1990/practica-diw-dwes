@@ -32,7 +32,6 @@
 </header>
 <?
     require './vista/login.php';
-    require './vista/principal.php';
 ?>
 <footer class="container-fluid bg-warning text-center">
     <div class="row align-items-center">
