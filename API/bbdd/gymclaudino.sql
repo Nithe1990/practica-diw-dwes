@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish2_ci;
 
 INSERT INTO `usuario` (`idUsuario`, `activo`, `user`, `contrasena`, `rol`, `email`, `telefono`, `fecha_nacimiento`) VALUES
-(1, 1, 'ejemplo', '1234', 'alumno', 'alumno@mail.com', '555123123', '1994-05-23');
+(1, 1, 'ej', 'AJ@95sjk', 'alumno', 'ej@mail.com', '555123123', '1994-05-23');
 
 
 ALTER TABLE `alumno_clase`
