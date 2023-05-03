@@ -24,7 +24,6 @@
             print_r($res);
             curl_close($curl);
             $usu = json_decode($res, true);
-            //crear sesión
             //si existe el usuario, crearle sesión
             if(isset($usu)){                
                 $_SESSION['idUsuario'] = $usu['idUsuario'];
