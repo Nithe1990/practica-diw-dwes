@@ -21,23 +21,29 @@
             curl_setopt($curl, CURLOPT_URL, URLAPI."usuario?usuario=".$_POST['user']."&contrasena=".$_POST['contrasena']);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             $res = curl_exec($curl);
-            print_r($res);
+            //print_r($res);
             curl_close($curl);
             $usu = json_decode($res, true);
             //si existe el usuario, crearle sesión
-            if(isset($usu)){                
+            if($usu != null){                
                 $_SESSION['idUsuario'] = $usu['idUsuario'];
                 $_SESSION['user'] = $usu['user'];
                 $_SESSION['rol'] = $usu['rol'];
+                $_SESSION['email'] = $usu['email'];
+                $_SESSION['telefono'] = $usu['telefono'];
+                $_SESSION['fecha_nacimiento'] = $usu['fecha_nacimiento'];
+                 //asignarle a session controlador index controlador y principal controlador
+            $_SESSION['controlador'] = "./controlador/principalControlador.php";
+            $_SESSION['vista'] = "./vista/principal.php";
             }else{
                 echo "usuario incorrecto";
             }
-            //asignarle a session controlador index controlador y principal controlador
-            
-
-            var_dump($_SESSION);
+           
+           
         }
-    }else{
-
+    }elseif(isset($_GET['crear'])){
+        $_SESSION['controlador'] = "./controlador/usuarioControlador.php";
+        $_SESSION['vista'] = "./vista/signin.php";
+        
     }
 ?>

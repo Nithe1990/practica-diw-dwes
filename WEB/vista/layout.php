@@ -9,8 +9,8 @@
     <title>Document</title>
 </head>
 <header class="container-fluid d-flex justify-content-around align-items-center bg-warning">
-    <img src="./webroot/imágenes/logo.png" alt="logo" width="128" height="auto">
-    <h1>Gimnasio Claudino</h1>
+    <a href="./index.php" ><img src="./webroot/imágenes/logo.png" alt="logo" width="128" height="auto">
+    <a href="./index.php" ><h1>Gimnasio Claudino</h1></a>
     <button data-bs-toggle="modal" data-bs-target="#modUsu">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
@@ -23,15 +23,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <a href="html/signin.html">Editar perfil</a><br />
-                    <a href="index.html">Cerrar sesión</a>
+                    <a href="index.php?editar">Editar perfil</a><br />
+                    <a href="index.php?logout">Cerrar sesión</a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 <?
-    require './vista/login.php';
+    require $_SESSION['vista'];
 ?>
 <footer class="container-fluid bg-warning text-center">
     <div class="row align-items-center">

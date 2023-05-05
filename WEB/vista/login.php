@@ -14,7 +14,7 @@
     <main class="container mb-5">
         <form method="POST" action="index.php" class="mt-5 p-2 border border-dark rounded">
             <section class="form-floating mb-3">
-                <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" name="user">
+                <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" name="user" value="ej1">
                 <label for="txtlogin">Usuario</label>
             </section>
             <span>
@@ -23,7 +23,7 @@
                 ?>
             </span>
             <section class="form-floating mb-3">
-                <input type="password" class="form-control" id="txtContrasena" placeholder="0000" name="contrasena">
+                <input type="password" class="form-control" id="txtContrasena" placeholder="0000" name="contrasena" value="AJ@95sjk">
                 <label for="txtContrasena">Contraseña</label>
             </section>
             <span><?if(isset($errorContrasena)) echo $errorContrasena;?></span>
@@ -36,7 +36,7 @@
                     <input type="submit" value="Acceder" name="acceder" class="btn btn-primary">
                 </div>
                 <div class="text-center">
-                    <a href="">Crear cuenta</a>
+                    <a href="index.php?crear">Crear cuenta</a>
                 </div>
             </div>
         </form>
