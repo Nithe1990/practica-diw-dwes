@@ -15,7 +15,7 @@ require "./configuracion/configuracion.php";
         session_destroy();
         header('Location: ./index.php');
     }elseif(isset($_GET['editar'])){
-        require "./controlador/usuarioControlador.php";
+        $_SESSION['controlador'] = "./controlador/usuarioControlador.php";
         $_SESSION['vista'] = "./vista/signin.php";
     }elseif(isset($_GET['home']) && isset($_SESSION['idUsuario'])){
         $_SESSION['controlador'] =  "./controlador/principalControlador.php";

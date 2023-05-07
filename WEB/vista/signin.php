@@ -41,7 +41,7 @@
                 </section>
                 <section class="col text-end">
                     <button class="btn btn-danger">Cancelar</button>
-                    <input type="submit" value="Registrarse" class="btn btn-primary">
+                    <input type="submit" value="Registrarse" class="btn btn-primary" id="btnAceptar">
                 </section>
             </div>
         </form>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./webroot/css/cabecera.css">
     <title>Document</title>
 </head>
-<header class="container-fluid d-flex justify-content-around align-items-center bg-warning">
+<header class="container-fluid d-flex justify-content-around align-items-center bg-warning mb-3">
     <a href="./index.php" ><img src="./webroot/imágenes/logo.png" alt="logo" width="128" height="auto">
     <a href="./index.php" ><h1>Gimnasio Claudino</h1></a>
     <button data-bs-toggle="modal" data-bs-target="#modUsu">
@@ -33,7 +33,7 @@
 <?
     require $_SESSION['vista'];
 ?>
-<footer class="container-fluid bg-warning text-center">
+<footer class="container-fluid bg-warning text-center mt-3">
     <div class="row align-items-center">
         <section class="row col-md-4">
             <div class="col-md-6">
