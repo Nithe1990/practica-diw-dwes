@@ -9,10 +9,23 @@
     <title>Document</title>
 </head>
 <body>
+    <?
+        function editar(){
+            if(isset($_GET['editar'])){
+                return true;
+            }
+            return false;
+        }
+    ?>
     <main class="container">
         <form action="">
             <section class="form-floating mb-3">
-                <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com">
+                <?if (editar())?><input type="hidden" id="ocId" name="idUsuario" value="<?echo $_SESSION['idUsuario']?>"><??>
+                <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" value="<?
+                    if(editar()){
+                        echo $_SESSION['user'];
+                    }
+                ?>">
                 <label for="txtlogin">Usuario</label>
             </section>
             <section class="form-floating mb-3">
@@ -24,15 +37,21 @@
                 <label for="txtReContrasena">Repetir contraseña</label>
             </section>
             <section class="form-floating mb-3">
-                <input type="email" class="form-control" id="txtEmail" placeholder="alguien@mail.com">
+                <input type="email" class="form-control" id="txtEmail" placeholder="alguien@mail.com" value="<?
+                    if(editar()) echo $_SESSION['email'];
+                ?>">
                 <label for="txtEmail">Email</label>
             </section>
             <section class="form-floating mb-3">
-                <input type="tel" class="form-control" id="txtTelefono" placeholder="555000123" pattern="[0-9]{9}">
+                <input type="tel" class="form-control" id="txtTelefono" placeholder="555000123" pattern="[0-9]{9}" value="<?
+                    if(editar()) echo $_SESSION['telefono'];
+                ?>">
                 <label for="txtTelefono">Teléfono</label>
             </section>
             <section class="form-floating mb-3">
-                <input type="datetime-local" class="form-control" id="calFechaNacimiento" placeholder="01/01/2000">
+                <input type="date" class="form-control" id="calFechaNacimiento" placeholder="01/01/2000" value="<?
+                    if(editar()) echo date("Y-m-d", strtotime($_SESSION['fecha_nacimiento']));
+                ?>">
                 <label for="calFechaNacimiento">Fecha de nacimiento</label>
             </section>
             <div>
@@ -41,7 +60,14 @@
                 </section>
                 <section class="col text-end">
                     <button class="btn btn-danger">Cancelar</button>
-                    <input type="submit" value="Registrarse" class="btn btn-primary" id="btnAceptar">
+                    <?
+                        if(editar()){
+                            ?><input type="submit" value="Guardar cambios" class="btn btn-primary" id="btnGuardar" name="guardarCambios"><?
+                        }else{
+                            ?><input type="submit" value="Aceptar" class="btn btn-primary" id="btnAceptar" name="crearUsuario"><?
+                        }
+                    ?>
+                    
                 </section>
             </div>
         </form>
