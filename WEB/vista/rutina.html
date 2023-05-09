@@ -21,7 +21,7 @@
                     <li class="list-group-item">
                         <div class="container row">
                             <span class="text-start col">Ejercicio 1</span>
-                            <button type="button" class="btn btn-primary col-auto text-end" data-bs-target="#modVideo">Vídeo</button>
+                            <button type="button" class="btn btn-primary col-auto text-end" data-bs-toggle="modal" data-bs-target="#modVideo">Vídeo</button>
                         </div>
                     </li>
                     <li class="list-group-item">
@@ -74,24 +74,24 @@
             </div>
         </section>
         <!-- modal de vídeo -->
-        <div class="modal" id="modVideo" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
+        <div class="modal" id="modVideo" tabindex="-1" aria-hidden="true" aria-labelledby="modalVideo">
+            <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button class="btn-close" type="button" data-bs-dimiss="modal"></button>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <video src="https://youtu.be/Kpy3Lt5vPDE"></video>
+                        <iframe width="1080" height="720" src="https://www.youtube.com/embed/JhcjQHkjklA?autoplay=1"></iframe>
                     </div>
                 </div>
             </div>
         </div>
         <nav class="d-flex justify-content-center">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#" aria-label="Primero">&laquo</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&lt;</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Siguiente">&gt;</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Último">&raquo;</a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Primero">&laquo Primero</a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&lt; Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Siguiente">Siguiente &gt;</a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Último">Último &raquo;</a></li>
             </ul>
         </nav>
     </main>

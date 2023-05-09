@@ -11,7 +11,7 @@
             $usu = json_decode($res, true);
 
         //si se le ha dado a guardar cambios, llamar al curl con el put
-        $data = array('usuario' => );
+        //$data = array('usuario' => );
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($curl, CURLOPT_URL, URLAPI."usuario/".$_SESSION['idUsuario']);
