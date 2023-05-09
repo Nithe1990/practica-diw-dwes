@@ -1,0 +1,18 @@
+#calendario {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+  }
+  #calendario td, #calendario th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+  }
+  #calendario th {
+    background-color: lightgray;
+  }
+  #calendario td.today {
+    background-color: lightblue;
+  }
+  #calendario td:not(.today):hover {
+    background-color: lightgray;
+  }
