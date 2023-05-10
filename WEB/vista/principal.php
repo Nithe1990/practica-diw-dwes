@@ -85,82 +85,88 @@
         <!-- sección de deportes -->
         <section class="text-center">
           <h2>Deportes</h2>
-          <div id="crsDeportes" class="carousel slide d-flex justify-content-center" data-bs-ride="true">
+          <div id="crsDeportes" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#crsDeportes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#crsDeportes" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#crsDeportes" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active d-flex justify-content-evenly">
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/ftb.jpg" class="card-img-top" alt="fútbol">
-                  <div class="card-body">
-                    <p class="card-text">Fútbol</p>
+              <div class="carousel-item active">
+                <div class="d-flex">
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/ftb.jpg" class="card-img-top" alt="fútbol">
+                    <div class="card-body">
+                      <p class="card-text">Fútbol</p>
+                    </div>
                   </div>
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/pressbanca.jpg" class="card-img-top" alt="pressbanca">
+                    <div class="card-body">
+                      <p class="card-text">Pressbanca</p>
+                    </div>
+                  </div>
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/running.jpg" class="card-img-top" alt="running">
+                    <div class="card-body">
+                      <p class="card-text">Running</p>
+                    </div>
                 </div>
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/pressbanca.jpg" class="card-img-top" alt="pressbanca">
-                  <div class="card-body">
-                    <p class="card-text">Pressbanca</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/running.jpg" class="card-img-top" alt="running">
-                  <div class="card-body">
-                    <p class="card-text">Running</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item d-flex justify-content-evenly">
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/evFbSala.jpg" class="card-img-top" alt="fútbol sala">
-                  <div class="card-body">
-                    <p class="card-text">Fútbol sala</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/paintball.jpg" class="card-img-top" alt="paintball">
-                  <div class="card-body">
-                    <p class="card-text">Paintball</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/eventoCarrera.jpg" class="card-img-top" alt="atletismo">
-                  <div class="card-body">
-                    <p class="card-text">Atletismo</p>
-                  </div>
                 </div>
               </div>
-              <div class="carousel-item d-flex justify-content-evenly">
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/ftb.jpg" class="card-img-top" alt="fútbol">
-                  <div class="card-body">
-                    <p class="card-text">Fútbol</p>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/evFbSala.jpg" class="card-img-top" alt="fútbol sala">
+                    <div class="card-body">
+                      <p class="card-text">Fútbol sala</p>
+                    </div>
                   </div>
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/paintball.jpg" class="card-img-top" alt="paintball">
+                    <div class="card-body">
+                      <p class="card-text">Paintball</p>
+                    </div>
+                  </div>
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/eventoCarrera.jpg" class="card-img-top" alt="atletismo">
+                    <div class="card-body">
+                      <p class="card-text">Atletismo</p>
+                    </div>
                 </div>
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/pressbanca.jpg" class="card-img-top" alt="pressbanca">
-                  <div class="card-body">
-                    <p class="card-text">Pressbanca</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="/WEB/webroot/imágenes/running.jpg" class="card-img-top" alt="running">
-                  <div class="card-body">
-                    <p class="card-text">Running</p>
-                  </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#crsDeportes" data-bs-slide="next">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#crsDeportes" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/ftb.jpg" class="card-img-top" alt="fútbol">
+                    <div class="card-body">
+                      <p class="card-text">Fútbol</p>
+                    </div>
+                  </div>
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/pressbanca.jpg" class="card-img-top" alt="pressbanca">
+                    <div class="card-body">
+                      <p class="card-text">Pressbanca</p>
+                    </div>
+                  </div>
+                  <div class="card me-2">
+                    <img src="/WEB/webroot/imágenes/running.jpg" class="card-img-top" alt="running">
+                    <div class="card-body">
+                      <p class="card-text">Running</p>
+                    </div>
+                </div>
+                </div>
+              </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#crsDeportes" data-bs-slide="next">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#crsDeportes" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </section>
       </main>
