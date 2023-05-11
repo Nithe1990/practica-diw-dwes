@@ -11,11 +11,25 @@
 <header class="container-fluid d-flex justify-content-around align-items-center bg-warning">
     <a href="./index.php?home" ><img src="./webroot/imágenes/logo.png" alt="logo" width="128" height="auto">
     <a href="./index.php?home" ><h1>Gimnasio Claudino</h1></a>
-    <button data-bs-toggle="modal" data-bs-target="#modUsu" <?if(empty($_SESSION['idUsuario'])) echo "disabled"?>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-        </svg>
-    </button>
+    <?
+        if(empty($_SESSION['idUsuario'])){
+            ?>
+                <button data-bs-toggle="modal" data-bs-target="#modUsu" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </button>
+            <?
+        }else{
+            ?>
+                <button data-bs-toggle="modal" data-bs-target="#modUsu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </button>
+            <?
+        }
+    ?>
     <div class="modal fade" id="modUsu" tabindex="-1" aria-labelledby="Modal usuario" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
