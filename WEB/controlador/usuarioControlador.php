@@ -21,7 +21,7 @@
         $res = curl_exec($curl);
         curl_close($curl);
     //si se le ha dado a registrar, llamar al curl con el post y crear el usuario
-    }elseif($_GET['crear']){
+    }elseif(isset($_GET['crear'])){
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
     }

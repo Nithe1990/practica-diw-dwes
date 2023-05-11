@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="./webroot/css/cabecera.css">
     <title>Document</title>
 </head>
-<header class="container-fluid d-flex justify-content-around align-items-center bg-warning mb-3">
-    <a href="./index.php" ><img src="./webroot/imágenes/logo.png" alt="logo" width="128" height="auto">
-    <a href="./index.php" ><h1>Gimnasio Claudino</h1></a>
-    <button data-bs-toggle="modal" data-bs-target="#modUsu">
+<header class="container-fluid d-flex justify-content-around align-items-center bg-warning">
+    <a href="./index.php?home" ><img src="./webroot/imágenes/logo.png" alt="logo" width="128" height="auto">
+    <a href="./index.php?home" ><h1>Gimnasio Claudino</h1></a>
+    <button data-bs-toggle="modal" data-bs-target="#modUsu" <?if(empty($_SESSION['idUsuario'])) echo "disabled"?>
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
         </svg>
@@ -30,7 +30,22 @@
         </div>
     </div>
 </header>
+<!-- si es admin, require el documento nav admin; si es monitor nav monitor; si es usuario, nav usuario-->
 <?
+    if(isset($_SESSION['rol'])){
+        switch ($_SESSION['rol']) {
+            case 'alumno':
+                require './vista/fragmentos/navAlumno.html';
+                break;
+            
+            case 'monitor':
+                require './vista/fragmentos/navMonitor.html';
+                break;
+            case 'administrador':
+                require './vista/fragmentos/navAdmin.html';
+                break;
+        }
+    }
     require $_SESSION['vista'];
 ?>
 <footer class="container-fluid bg-warning text-center mt-3">

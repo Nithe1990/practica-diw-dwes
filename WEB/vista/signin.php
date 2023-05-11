@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
@@ -20,7 +19,7 @@
     <main class="container">
         <form action="">
             <section class="form-floating mb-3">
-                <?if (editar())?><input type="hidden" id="ocId" name="idUsuario" value="<?echo $_SESSION['idUsuario']?>"><??>
+                <?if (editar())?><input type="hidden" id="ocId" name="idUsuario" value="<?if(editar()) echo $_SESSION['idUsuario']?>">
                 <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" value="<?
                     if(editar()){
                         echo $_SESSION['user'];
@@ -67,7 +66,6 @@
                             ?><input type="submit" value="Aceptar" class="btn btn-primary" id="btnAceptar" name="crearUsuario"><?
                         }
                     ?>
-                    
                 </section>
             </div>
         </form>
