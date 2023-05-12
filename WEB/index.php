@@ -20,6 +20,10 @@ require "./configuracion/configuracion.php";
     }elseif(isset($_GET['home']) && isset($_SESSION['idUsuario'])){
         $_SESSION['controlador'] =  "./controlador/principalControlador.php";
         $_SESSION['vista'] = "./vista/principal.php";
+    }elseif(isset($_GET['rutina'])){
+        $_SESSION['vista'] = "./vista/rutina.php";
+    }elseif(isset($_GET['reservas'])){
+        $_SESSION['vista'] = "./vista/reservas.php";
     }
     //requerir session controlador
     require $_SESSION['controlador'];

@@ -19,7 +19,7 @@
         }
 
         public static function validaUsuario($usu, $contrasena){
-            $sql = "select * from usuario where user = ? AND contrasena = ?";
+            $sql = "select * from usuario where user = ? AND contrasena = ? AND activo = 1";
             $datos = array($usu, $contrasena);
             $resultado = parent::ejecutar($sql, $datos);
             $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
