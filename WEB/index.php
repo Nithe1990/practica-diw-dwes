@@ -24,6 +24,8 @@ require "./configuracion/configuracion.php";
         $_SESSION['vista'] = "./vista/rutina.php";
     }elseif(isset($_GET['reservas'])){
         $_SESSION['vista'] = "./vista/reservas.php";
+    }elseif(isset($_GET['historialClases'])){
+        $_SESSION['vista'] = "./vista/historialclases.php";
     }
     //requerir session controlador
     require $_SESSION['controlador'];

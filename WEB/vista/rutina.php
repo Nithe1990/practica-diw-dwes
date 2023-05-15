@@ -78,20 +78,20 @@
                         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- <iframe width="1080" height="720" src="https://www.youtube.com/embed/JhcjQHkjklA?autoplay=1"></iframe> -->
+                        <iframe width="1080" height="720" src="https://www.youtube.com/embed/JhcjQHkjklA?autoplay=1"></iframe>
                     </div>
                 </div>
             </div>
         </div>
         <nav class="d-flex justify-content-center">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#" aria-label="Primero">&laquo Primero</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&lt; Anterior</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Siguiente">Siguiente &gt;</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Último">Último &raquo;</a></li>
+                <li class="page-item"><a class="page-link" id="pgPrimero" href="#" aria-label="Primero">&laquo Primero</a></li>
+                <li class="page-item"><a class="page-link" id="pgAnterior" href="#" aria-label="Anterior">&lt; Anterior</a></li>
+                <li class="page-item"><a class="page-link" id="pgSiguiente" href="#" aria-label="Siguiente">Siguiente &gt;</a></li>
+                <li class="page-item"><a class="page-link" id="pgUltimo" href="#" aria-label="Último">Último &raquo;</a></li>
             </ul>
         </nav>
     </main>
-    <script src="../webroot/js/rutina.js"></script>
+    <script src="./webroot/js/rutina.js"></script>
 </body>
 </html>
