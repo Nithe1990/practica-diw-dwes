@@ -20,7 +20,7 @@
         <form action="">
             <section class="form-floating mb-3">
                 <?if (editar())?><input type="hidden" id="ocId" name="idUsuario" value="<?if(editar()) echo $_SESSION['idUsuario']?>">
-                <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" value="<?
+                <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" name="login" value="<?
                     if(editar()){
                         echo $_SESSION['user'];
                     }
@@ -28,27 +28,27 @@
                 <label for="txtlogin">Usuario</label>
             </section>
             <section class="form-floating mb-3">
-                <input type="password" class="form-control" id="txtContrasena" placeholder="0000" onpaste="return false">
+                <input type="password" class="form-control" id="txtContrasena" placeholder="0000" name="pass">
                 <label for="txtContrasena">Contraseña</label>
             </section>
             <section class="form-floating mb-3">
-                <input type="password" class="form-control" id="txtReContrasena" placeholder="0000" onpaste="return false">
+                <input type="password" class="form-control" id="txtReContrasena" placeholder="0000" name="comprobar">
                 <label for="txtReContrasena">Repetir contraseña</label>
             </section>
             <section class="form-floating mb-3">
-                <input type="email" class="form-control" id="txtEmail" placeholder="alguien@mail.com" value="<?
+                <input type="email" class="form-control" id="txtEmail" placeholder="alguien@mail.com" name="mail" value="<?
                     if(editar()) echo $_SESSION['email'];
                 ?>">
                 <label for="txtEmail">Email</label>
             </section>
             <section class="form-floating mb-3">
-                <input type="tel" class="form-control" id="txtTelefono" placeholder="555000123" pattern="[0-9]{9}" value="<?
+                <input type="tel" class="form-control" id="txtTelefono" placeholder="555000123" pattern="[0-9]{9}" name="telefono" value="<?
                     if(editar()) echo $_SESSION['telefono'];
                 ?>">
                 <label for="txtTelefono">Teléfono</label>
             </section>
             <section class="form-floating mb-3">
-                <input type="date" class="form-control" id="calFechaNacimiento" placeholder="01/01/2000" value="<?
+                <input type="date" class="form-control" id="calFechaNacimiento" placeholder="01/01/2000" name="fechaNacimiento" value="<?
                     if(editar()) echo date("Y-m-d", strtotime($_SESSION['fecha_nacimiento']));
                 ?>">
                 <label for="calFechaNacimiento">Fecha de nacimiento</label>

@@ -21,9 +21,16 @@
         $res = curl_exec($curl);
         curl_close($curl);
     //si se le ha dado a registrar, llamar al curl con el post y crear el usuario
-    }elseif(isset($_GET['crear'])){
+    }elseif(isset($_GET['crearUsuario'])){
+        $array = array("user" => $_REQUEST['login'], "contrasena" => $_REQUEST['pass'], "rol" => "alumno", "email" => $_REQUEST['mail'], "telefono" => $_REQUEST['telefono'], "fecha_nacimiento" => $_REQUEST['fechaNacimiento']);
+        $array = json_encode($array);
         $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, URLAPI."usuario");
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($curl, CURLOPT_POST, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $array);
+        $res = curl_exec($curl);
+        curl_close($curl);
     }
-
 ?>

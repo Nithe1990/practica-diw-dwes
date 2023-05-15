@@ -5,7 +5,7 @@ require "./configuracion/configuracion.php";
     //si se pulsa el botón acceder, llama a loginControlador
     //si el usuario no está validado, en su sesión vista poner el login
     
-    if(empty($_SESSION) || !isset($_SESSION['idUsuario']) ){
+    if(empty($_SESSION) || (!isset($_SESSION['idUsuario'] ) && !isset($_REQUEST['crearUsuario'])) ){
         $_SESSION['vista'] = "./vista/login.php";
         $_SESSION['controlador'] = "./controlador/loginControlador.php";
     }elseif(isset($_POST['acceder'])){
