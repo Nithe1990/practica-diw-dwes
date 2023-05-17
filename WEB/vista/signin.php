@@ -17,7 +17,7 @@
         }
     ?>
     <main class="container">
-        <form action="">
+        <form action="index.php" method="$_POST">
             <section class="form-floating mb-3">
                 <?if (editar())?><input type="hidden" id="ocId" name="idUsuario" value="<?if(editar()) echo $_SESSION['idUsuario']?>">
                 <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" name="login" value="<?
@@ -25,6 +25,7 @@
                         echo $_SESSION['user'];
                     }
                 ?>">
+                <?if(isset)?>
                 <label for="txtlogin">Usuario</label>
             </section>
             <section class="form-floating mb-3">
