@@ -14,7 +14,9 @@
     <main class="container mb-5">
         <form method="POST" action="index.php" class="mt-5 p-2 border border-dark rounded">
             <section class="form-floating mb-3">
-                <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" name="user" value="ej1">
+                <input type="text" class="form-control" id="txtlogin" placeholder="usuario@mail.com" name="user" value="<?
+                    if(isset($_COOKIE['username'])) echo $_COOKIE['username'];
+                ?>">
                 <label for="txtlogin">Usuario</label>
             </section>
             <span>

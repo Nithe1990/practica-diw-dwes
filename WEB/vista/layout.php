@@ -116,3 +116,4 @@ require $_SESSION['vista'];
 <script src="./webroot/js/calendario.js"></script>
 <script src="./webroot/js/bootstrap-datepicker.js"></script>
 <script src="./webroot/js/reservas.js"></script>
+<script src="./webroot/js/rutina.js"></script>

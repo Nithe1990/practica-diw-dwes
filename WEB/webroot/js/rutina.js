@@ -4,7 +4,7 @@ $(document).ready(function(){
     $("#pgPrimero").click(function(){
         pag = 1;
         c = 0;
-        $("span").each(function(){
+        $(".list-group-item span").each(function(){
             $(this).text("Ejercicio " + c);
             c++;
         });
@@ -18,7 +18,7 @@ $(document).ready(function(){
             }else{
                 c = 8;
             }
-            $("span").each(function(){
+            $(".list-group-item span").each(function(){
                 $(this).text("Ejercicio " + c);
                 c++;
             });
@@ -33,7 +33,7 @@ $(document).ready(function(){
             }else{
                 c = 16;
             }
-            $("span").each(function(){
+            $(".list-group-item span").each(function(){
                 $(this).text("Ejercicio " + c);
                 c++;
             });
@@ -43,7 +43,7 @@ $(document).ready(function(){
     $("#pgUltimo").click(function(){
         pag = 3;
         c = 16;
-        $("span").each(function(){
+        $(".list-group-item span").each(function(){
             $(this).text("Ejercicio " + c);
             c++;
         });

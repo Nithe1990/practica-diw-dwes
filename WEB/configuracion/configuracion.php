@@ -1,3 +1,3 @@
 <?
-    define("URLAPI", "http://192.168.2.103/API/index.php/");
+    define("URLAPI", "http://192.168.70.82/API/index.php/");
 ?>

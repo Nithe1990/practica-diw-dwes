@@ -32,6 +32,12 @@
                 $_SESSION['email'] = $usu['email'];
                 $_SESSION['telefono'] = $usu['telefono'];
                 $_SESSION['fecha_nacimiento'] = $usu['fecha_nacimiento'];
+
+                //cookie para que recuerde el nombre de usuario. 30 Días
+                if (isset($_POST['recordar']) && $_POST['recordar'] == 'recordar'){
+                    setcookie("username", $_POST['user'], time() + (86400 * 30));
+                }
+
                  //asignarle a session controlador index controlador y principal controlador
             $_SESSION['controlador'] = "./controlador/principalControlador.php";
             $_SESSION['vista'] = "./vista/principal.php";

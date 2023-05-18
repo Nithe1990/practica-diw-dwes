@@ -32,6 +32,8 @@ require "./configuracion/configuracion.php";
         $_SESSION['vista'] = "./vista/detallesEvento.php";
     }elseif(isset($_GET['anadirEvento'])){
         $_SESSION['vista'] = "./vista/anadirEvento.php";
+    }elseif(isset($_GET['listaEjercicios'])){
+        $_SESSION['vista'] = "./vista/listaEjercicios.php";
     }
     //requerir session controlador
     require $_SESSION['controlador'];
