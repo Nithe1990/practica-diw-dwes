@@ -1,4 +1,4 @@
-<form method="POST">
+<form method="POST" action="index.php?eventos">
     <div class="d-flex justify-content-around mb-2">
         <div class="form-floating">
             <input class="form-control" type="text" name="titular" id="txtTitular" placeholder="Titular">
@@ -24,6 +24,7 @@
                 <button type="button" class="btn btn-danger">Cancelar</button>
             </a>
             <input class="btn btn-primary" type="submit" value="Añadir" name="añadir">
+            </a>
         </div>
     </div>
 </form>

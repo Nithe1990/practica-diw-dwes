@@ -2,8 +2,6 @@
     <link rel="stylesheet" href="./webroot/css/historialClases.css">
     <title>Historial de clases</title>
 </head>
-
-<body>
     <main class="row">
         <div class="col-md-6">
             <ul class="list-group">
@@ -199,6 +197,3 @@
         </nav>
     </main>
     <script src="./webroot/js/historialClases.js"></script>
-</body>
-
-</html>

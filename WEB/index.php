@@ -34,6 +34,10 @@ require "./configuracion/configuracion.php";
         $_SESSION['vista'] = "./vista/anadirEvento.php";
     }elseif(isset($_GET['listaEjercicios'])){
         $_SESSION['vista'] = "./vista/listaEjercicios.php";
+    }elseif(isset($_GET['ejercicio'])){
+        $_SESSION['vista'] = "./vista/ejercicio.php";
+    }elseif(isset($_GET['clase'])){
+        $_SESSION['vista'] = "./vista/clase.php";
     }
     //requerir session controlador
     require $_SESSION['controlador'];
