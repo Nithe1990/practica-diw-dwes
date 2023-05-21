@@ -1,5 +1,5 @@
 <main class="container">
-    <form action="index.php" method="post">
+    <form action="index.php" method="post" class="mx-5">
         <div class="row mb-3">
             <div class="form-floating col-12 col-md-8 mb-md-0 mb-3">
                 <input class="form-control" type="text" name="sala" id="txtSala" placeholder="Cancha">
@@ -51,7 +51,9 @@
                 <button type="reset" class="btn btn-light col-12 col-md-auto">Reiniciar</button>
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-evenly justify-content-md-end">
-                <button type="button" class="btn btn-danger col-auto me-md-3">Cancelar</button>
+                <a href="index.php?reservas" class="col-auto me-md-3">
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                </a>
                 <button type="submit" class="btn btn-primary col-auto">Aceptar</button>
             </div>
         </div>

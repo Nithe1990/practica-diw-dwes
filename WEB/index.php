@@ -38,6 +38,12 @@ require "./configuracion/configuracion.php";
         $_SESSION['vista'] = "./vista/ejercicio.php";
     }elseif(isset($_GET['clase'])){
         $_SESSION['vista'] = "./vista/clase.php";
+    }elseif(isset($_GET['listaUsuarios'])){
+        $_SESSION['vista'] = "./vista/listaUsuarios.php";
+    }elseif(isset($_GET['usuario'])){
+        $_SESSION['vista'] = "./vista/usuario.php";
+    }elseif(isset($_GET['verificar'])){
+        $_SESSION['vista'] = "./vista/verificar.php";
     }
     //requerir session controlador
     require $_SESSION['controlador'];
