@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="./webroot/css/bootstrap-datepicker.standalone.css">
     <link rel="stylesheet" href="./webroot/css/calendario.css">
+    <link rel="stylesheet" href="./webroot/css/navegador.css">
+    <link rel="stylesheet" href="./webroot/css/animacion.css">
     <title>Document</title>
 </head>
 <header class="container-fluid d-flex justify-content-around align-items-center bg-warning">
@@ -117,3 +119,4 @@ require $_SESSION['vista'];
 <script src="./webroot/js/bootstrap-datepicker.js"></script>
 <script src="./webroot/js/reservas.js"></script>
 <script src="./webroot/js/rutina.js"></script>
+<script src="./webroot/js/verificar.js"></script>

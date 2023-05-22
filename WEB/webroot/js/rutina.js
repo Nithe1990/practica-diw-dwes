@@ -1,9 +1,9 @@
 $(document).ready(function(){
     let pag = 1;
-    let c = 0;
+    let c = 1;
     $("#pgPrimero").click(function(){
         pag = 1;
-        c = 0;
+        c = 1;
         $(".list-group-item span").each(function(){
             $(this).text("Ejercicio " + c);
             c++;
@@ -14,9 +14,9 @@ $(document).ready(function(){
         if(pag > 1){
             pag --;
             if(pag == 1){
-                c = 0;
+                c = 1;
             }else{
-                c = 8;
+                c = 9;
             }
             $(".list-group-item span").each(function(){
                 $(this).text("Ejercicio " + c);
@@ -29,9 +29,9 @@ $(document).ready(function(){
         if(pag < 3){
             pag ++;
             if(pag == 2){
-                c = 8;
+                c = 9;
             }else{
-                c = 16;
+                c = 17;
             }
             $(".list-group-item span").each(function(){
                 $(this).text("Ejercicio " + c);
@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     $("#pgUltimo").click(function(){
         pag = 3;
-        c = 16;
+        c = 17;
         $(".list-group-item span").each(function(){
             $(this).text("Ejercicio " + c);
             c++;

@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $(".checkVerificar").change(function(){
+        if($(this).is(":checked")){
+            $(this).parent().next().children(":only-child").show();
+        }else{
+            $(this).parent().next().children(":only-child").hide();
+        }
+    });
+});

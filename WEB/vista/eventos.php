@@ -1,18 +1,36 @@
     <ul class="list-group container mb-3">
         <li class="list-group-item text-center">
             <h2>Carrera contra el cáncer</h2>
-            <img src="./webroot/imágenes/eventoCarrera.jpg" alt="" width="360" height="auto">
-            <a href="index.php?ev=1">Ver más</a>
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <img src="./webroot/imágenes/eventoCarrera.jpg" alt="" width="360" height="auto" class="animacion">
+                </div>
+                <div class="col-auto">
+                    <a href="index.php?ev=1">Ver más</a>
+                </div>
+            </div>
         </li>
         <li class="list-group-item text-center">
             <h2>Torneo de fútbol sala</h2>
-            <img src="./webroot/imágenes/evFbSala.jpg" alt="" width="360" height="auto">
-            <a href="index.php?ev=2">Ver más</a>
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <img src="./webroot/imágenes/evFbSala.jpg" alt="" width="360" height="auto" class="animacion">
+                </div>
+                <div class="col-auto">
+                    <a href="index.php?ev=2">Ver más</a>
+                </div>
+            </div>
         </li>
         <li class="list-group-item text-center">
             <h2>Paintball: batalla campal</h2>
-            <img src="./webroot/imágenes/paintball.jpg" alt="" width="360" height="auto">
-            <a href="index.php?ev=3">Ver más</a>
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <img src="./webroot/imágenes/paintball.jpg" alt="" width="360" height="auto" class="animacion">
+                </div>
+                <div class="col-auto">
+                    <a href="index.php?ev=3">Ver más</a>
+                </div>
+            </div>
         </li>
     </ul>
     <div class="row">

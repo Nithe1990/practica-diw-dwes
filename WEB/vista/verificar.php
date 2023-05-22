@@ -1,5 +1,5 @@
 <main class="container">
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-8 btn-group d-none d-md-inline text-end" role="group">
             <input type="radio" class="btn-check" name="rgOrden1" id="rbRegistrados" autocomplete="off" checked>
             <label class="btn btn-outline-primary" for="rbRegistrados">Registrados</label>
@@ -49,7 +49,7 @@
                                                     echo "Alumno ".$n;
                                                 ?></span>
                                                 <div class="form-check form-switch col d-flex justify-content-center">
-                                                    <input class="form-check-input" type="checkbox" role="switch">
+                                                    <input class="form-check-input checkVerificar" type="checkbox" role="switch" checked>
                                                 </div>
                                                 <span class="col text-end">
                                                     <a href="index.php?rutina">Rutina</a>
@@ -65,4 +65,12 @@
             }
         ?>
     </div>
+    <nav class="col d-flex justify-content-center">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#" aria-label="Primero">&laquo Primero</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&lt; Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Siguiente">Siguiente &gt;</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Último">Último &raquo;</a></li>
+        </ul>
+    </nav>
 </main>
